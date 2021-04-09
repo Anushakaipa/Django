@@ -1,0 +1,29 @@
+{% extends 'html/header.html' %}
+{% block title %}Table {% endblock %}
+{% block content %}
+<div class="card col-md-6 mt-2">
+			<h4 class="bg-primary text-white text-center border rounded mt-2 p-3">User Details</h4>
+			<table class="table table-hover">
+				<tr>
+					<th>S.No</th>
+					<th>Username</th>
+					<th>EmailID</th>
+					<th>Age</th>
+					<th>Actions</th>
+				</tr>
+				
+				{% for i in info %}
+				<tr>
+					<td>{{forloop.counter}}</td>
+					<td>{{i.Username}}</td>
+					<td>{{i.password}}</td>
+					<td>{{i.email}}</td>
+					<td>{{i.age}}</td>
+					<td><a class="btn btn-primary mx-1" href="{% url 'ue' i.id %}">Edit</a><a class="btn btn-danger mx-1" href="{% url 'del' i.id %}">Delete</a></td>
+					</tr>
+				{% endfor %}
+			
+			</table>
+		</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'html/header.html' %}
+{% block title %}Operations{% endblock %}
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="card col col-md-3 mt-2">
+			<h4 class="p-3 bg-primary text-white text-center mt-2 border rounded">Add User</h4>
+			<form method="POST">
+				{% csrf_token %}
+				<input type="text" name="name" placeholder="Enter Name" class="form-control my-2">
+				<input type="password" name="pwd" placeholder="Enter Password" class="form-control my-2">
+				<input type="email" name="eml" placeholder="Enter Email" class="form-control my-2">
+				<input type="number" name="age" placeholder="Enter Age" class="form-control my-2">
+				<input type="submit" name="" class=" form-control btn btn-primary btn-block my-2" value="Submit">
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

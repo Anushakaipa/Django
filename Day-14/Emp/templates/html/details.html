@@ -1,0 +1,25 @@
+{% extends 'html/header.html' %}
+{% block title %} Details {% endblock %}
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="card col-md-4 mr-2 mt-5">
+			<h4>Profile Image</h4>
+			<div class="card-body">
+			<img src="https://image.shutterstock.com/image-photo/3d-wallpaper-design-waterfall-sea-260nw-1380925703.jpg" alt="www.google.com" width="200px" height="200px">
+		</div>
+	</div>
+		<div class="card col-md-7 mt-5">
+			<h4>User_details</h4>
+			<div class=" ">
+				<h6><label class="text-danger">User Name: {{us}}</label></h6>
+				<h6><label class="text-danger">Email address: {{eml}}</label></h6>
+				<h6><label class="text-success">Password: {{p}}</label></h6>
+				<h6><label class="text-muted">Age: {{ag}}</label></h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
